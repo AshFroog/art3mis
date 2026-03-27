@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Art3mis - Portfolio, creative showcase, and personal space of Asher Zuurendonk.">
+    <title>Art3mis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6f0;
+            color: #333;
+        }
+        nav {
+            background-color: #613160;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header img {
+            max-width: 100%;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .tagline {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+        section#starview {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Algemene knopstijl (voor roadmap + step-one links) */
+        .doc-link a,
+        #step-one a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #613160; /* zelfde als nav */
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .doc-link a:hover,
+        #step-one a:hover {
+            background-color: #8a4a89; /* lichtere hoverkleur */
+        }
+
+        /* Roadmap spacing */
+        .doc-link {
+            margin: 15px 0;
+        }
+
+/* Lijst neemt alleen de ruimte van de knoppen */
+#step-one ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;    /* onder elkaar */
+    gap: 10px;                 /* ruimte tussen knoppen */
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rp1.html">Starview</a></li>
+            <li><a href="pinterest.html">Fun</a></li>
+            <li><a href="sharkies.html">Creative</a></li>
+            <li><a href="avatar.html">Blog</a></li>
+            <li><a href="motors.html">Motors</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Starview</h1>
+        <p class="tagline">"Accept your heart will break, and trust that you will survive."</p>
+        <img src="img/dreaming.jpg" alt="What will your next dream be?">
+    </header>
+
+    <!-- Starview content -->
+    <section id="starview">
+        <h2>Starview</h2>
+        <p>Welcome to the Starview update hub! 🌟 Follow along as we explore celestial islands, ride magical horses, and unlock star-powered adventures. Every update brings new discoveries, choices, and cosmic mysteries—join the journey and see the world of Starview grow!</p>
+        <div class="doc-link">
+            <a href="Docs/Roadmap.pdf" target="_blank" rel="noopener noreferrer">Roadmap</a>
+        </div>
+
+        <p>So far ive finished step ONE, check it out!</p>
+
+        <h3>Step ONE</h3>
+        <div id="step-one">
+            <ul>
+                <li><a href="Docs/Step ONE - Concept & Planning (concept).pdf" target="_blank" rel="noopener noreferrer">Concept</a></li>
+                <li><a href="Docs/Step ONE - Concept & Planning (gameplay).pdf" target="_blank" rel="noopener noreferrer">Gameplay</a></li>
+                <li><a href="Docs/Step ONE - Concept & Planning (scale).pdf" target="_blank" rel="noopener noreferrer">Scale</a></li>
+                <li><a href="Docs/Step ONE - Concept & Planning (rough outline).pdf" target="_blank" rel="noopener noreferrer">Rough outline</a></li>
+            </ul>
+        </div>
+        <h3>Step TWO</h3>
+        <p>Work In Progress</p>
+        <p>Check back later for more information!</p>
+        
+    </section>
+</body>
+</html>

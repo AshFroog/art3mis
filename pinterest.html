@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Art3mis - Portfolio, creative showcase, and personal space of Asher Zuurendonk.">
+  <title>Art3mis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf6f0;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #613160;
+      padding: 10px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      border-bottom: 1px solid #ddd;
+    }
+    section h2 {
+      color: #613160;
+      margin-bottom: 15px;
+    }
+    section p {
+      line-height: 1.6;
+    }
+ header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header img {
+            max-width: 100%;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .tagline {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+
+    /* Image grid */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.image-grid img {
+  height: 300px;       /* vaste hoogte */
+  width: auto;         /* geen vervorming */
+  border-radius: 12px; /* mooie ronde hoeken */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* zachte schaduw */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03); /* lichte zoom bij hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+        <li><a href="rp1.html">Starview</a></li>
+      <li><a href="pinterest.html">Fun</a></li>
+      <li><a href="sharkies.html">Creative</a></li>
+      <li><a href="avatar.html">Blog</a></li>
+      <li><a href="motors.html">Motors</a></li>
+    </ul>
+  </nav>
+   <!-- hero section -->
+    <header>
+        <h1>Fun</h1>
+        <p class="tagline">"And into the forest i go, to lose my mind and my soul."</p>
+        <img src="img/lost.jpg" alt="Are you lost?">
+    </header>
+
+  <!-- Pinterest Section -->
+  <section id="pinterest">
+    <h2>Pinterest finds</h2>
+    <p>Pinterest is a visual discovery platform where people collect, organize, and share ideas through images and short videos, called Pins. Users can save these Pins to themed boards—like fashion inspiration, home décor, recipes, travel plans, or creative projects—essentially turning Pinterest into a digital scrapbook or mood board.</p>
+    <p>Unlike most social media platforms, Pinterest focuses less on real-time updates and more on inspiration and planning. People often use it as a search engine for creative ideas, whether they’re looking for DIY tutorials, style trends, or meal prep guides. Its algorithm recommends content based on your interests and saved Pins, which makes it highly personalized.</p>
+    <p>Platforms "like Pinterest"—such as Instagram (for visual sharing), Tumblr (for aesthetic blogging), or even TikTok (for short, creative content)—serve overlapping purposes, but Pinterest stands out as being more about curation and planning than social interaction.</p>
+    <div class="image-grid">
+      <img src="img/vosje.jpg" alt="Vosje">
+      <img src="img/love cards.jpg" alt="Love cards">
+    </div>
+  </section>
+
+  <!-- Sharkies Section -->
+  <section id="sharkies">
+    <h2>Sharkies</h2>
+    <p>The blacktip reef shark (Carcharhinus melanopterus) is a small, agile shark that lives in shallow, tropical coral reefs across the Indo-Pacific region. It’s easy to recognize by the distinct black tips on its fins, especially the dorsal fin, which often breaks the surface as the shark swims in very shallow waters.</p>
+    <p>Growing up to about 1.5–1.8 meters (5–6 feet) in length, the blacktip reef shark is not considered dangerous to humans. They are generally shy, though they may display curiosity if approached by divers or snorkelers. Their diet mainly consists of small fish, squid, and crustaceans, making them important predators in maintaining reef ecosystem balance.</p>
+    <p>Unlike some larger shark species, blacktip reef sharks rarely travel far; they tend to stay close to their home reefs. They are also viviparous, meaning they give birth to live young, usually 2–5 pups at a time.</p>
+    <p>Unfortunately, these sharks face threats from overfishing, bycatch, and habitat loss, leading to their classification as Near Threatened by the IUCN. They play a crucial role in reef health, so conserving them helps protect entire marine ecosystems.</p>
+    <div class="image-grid">
+      <img src="img/my babey.jpg" alt="My babey shark">
+      <img src="img/sharky.jpg" alt="Sharky">
+    </div>
+  </section>
+
+  <!-- Avatar Section -->
+  <section id="avatar">
+    <h2>Avatar</h2>
+    <p>Avatar is James Cameron’s epic science fiction film universe, beginning with the 2009 blockbuster and followed by its sequels.
+    The story takes place on Pandora, a lush alien moon inhabited by the Na’vi—tall, blue-skinned humanoids who live in harmony with nature and a spiritual force called Eywa. Humans arrive on Pandora to mine a rare mineral, unobtanium, sparking conflict between industrial exploitation and the Na’vi’s way of life. Through the Avatar Program, human minds are linked to genetically engineered Na’vi bodies, allowing them to explore Pandora’s environment. The protagonist, Jake Sully, enters this world and ultimately sides with the Na’vi against human greed.</p>
+    <p>The film is praised for its groundbreaking visual effects and worldbuilding, creating a fully immersive alien ecosystem with floating mountains, glowing forests, and exotic creatures. It also explores themes of colonialism, environmentalism, and cultural respect, echoing real-world struggles between indigenous peoples and industrial powers.</p>
+    <p>Its sequels, starting with Avatar: The Way of Water (2022), expand on Pandora’s cultures and environments, particularly the ocean clans, while continuing the story of Jake, Neytiri, and their family.</p>
+    <div class="image-grid">
+      <img src="img/jake sully.jpg" alt="Jake Sully">
+      <img src="img/neytiri.jpg" alt="Neytiri">
+    </div>
+  </section>
+
+  <!-- Ready Player One Section -->
+  <section id="readyplayerone">
+    <h2>Ready player one</h2>
+    <p>The Ready Player One books by Ernest Cline (Ready Player One and its sequel Ready Player Two) are fast-paced science fiction adventures that dive into the intersection of virtual reality, pop culture, and human connection.</p>
+    <p>The first novel introduces the OASIS, a massive virtual universe where people escape the bleak realities of a dystopian world. When its creator dies, he leaves behind a puzzle-hunt for control of the OASIS, filled with challenges inspired by 1980s games, movies, and music. Wade Watts, a young gamer, takes on the quest, facing not just riddles and trials but also ruthless corporate competitors.</p>
+    <p>The sequel, Ready Player Two, expands the stakes by introducing new technology that allows users to experience the OASIS more deeply, blurring the line between reality and simulation. Once again, Wade and his friends are forced into a high-stakes hunt that challenges their morality, relationships, and sense of identity.</p>
+    <p>Both books explore themes of nostalgia, escapism, friendship, and the dangers of technology when it becomes too intertwined with human life.</p>
+    <div class="image-grid">
+      <img src="https://assets.mycast.io/actor_images/actor-art3mis-ready-player-one-390295_large.jpg?1647966913" alt="Art3mis">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuZ5rLpsornT60iuHXwFVRJsxGM36EX0fNoA&s" alt="Ready Player One Poster">
+    </div>
+  </section>
+
+</body>
+</html>
