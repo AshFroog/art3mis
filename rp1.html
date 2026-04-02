@@ -6,35 +6,156 @@
     <meta name="description" content="Art3mis - Portfolio, creative showcase, and personal space of Asher Zuurendonk.">
     <title>Art3mis</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fdf6f0;
-            color: #333;
-        }
-        nav {
-            background-color: #613160;
-            padding: 10px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+/* BASIS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6f0;
+    color: #333;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #613160;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN CONTAINER */
+#starview {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TITLES */
+#starview h2 {
+    margin-top: 0;
+    color: #613160;
+    text-align: center;
+    font-size: 28px;
+}
+
+#starview h3 {
+    margin-top: 30px;
+    color: #613160;
+    font-size: 20px;
+}
+
+/* TEXT */
+#starview p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* STATUS */
+#starview strong {
+    color: #613160;
+}
+
+/* ROADMAP BUTTON */
+.doc-link {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.doc-link a {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #613160;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.doc-link a:hover {
+    background-color: #8a4a89;
+    transform: translateY(-2px);
+}
+
+/* STEP LIST */
+#step-one ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#step-one li {
+    margin-bottom: 12px;
+}
+
+/* STEP LINKS */
+#step-one a {
+    display: inline-block;
+    padding: 10px 14px;
+    background-color: #eee3ee;
+    color: #613160;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+#step-one a:hover {
+    background-color: #e0cce0;
+    transform: translateY(-2px);
+}
+
+/* STEP TWO */
+#starview p:last-child {
+    margin-bottom: 0;
+}
+
+/* OPTIONAL IMAGE STYLE */
+#starview img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    #starview {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
         header {
             text-align: center;
             padding: 50px 20px;
@@ -48,32 +169,6 @@
             font-style: italic;
             color: #555;
             margin-top: 10px;
-        }
-        section#starview {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        /* Algemene knopstijl (voor roadmap + step-one links) */
-        .doc-link a,
-        #step-one a {
-            display: inline-block;
-            padding: 8px 12px;
-            background-color: #613160; /* zelfde als nav */
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-        .doc-link a:hover,
-        #step-one a:hover {
-            background-color: #8a4a89; /* lichtere hoverkleur */
-        }
-
-        /* Roadmap spacing */
-        .doc-link {
-            margin: 15px 0;
         }
 
 /* Lijst neemt alleen de ruimte van de knoppen */
@@ -110,28 +205,51 @@
     </header>
 
     <!-- Starview content -->
-    <section id="starview">
-        <h2>Starview</h2>
-        <p>Welcome to the Starview update hub! 🌟 Follow along as we explore celestial islands, ride magical horses, and unlock star-powered adventures. Every update brings new discoveries, choices, and cosmic mysteries—join the journey and see the world of Starview grow!</p>
-        <div class="doc-link">
-            <a href="Roadmap.pdf" target="_blank" rel="noopener noreferrer">Roadmap</a>
-        </div>
+<!-- Starview content -->
+<section id="starview" style="max-width: 800px; margin: 40px auto; padding: 20px;">
 
-        <p>So far ive finished step ONE, check it out!</p>
+    <h2>Starview</h2>
 
-        <h3>Step ONE</h3>
-        <div id="step-one">
-            <ul>
-                <li><a href="Step ONE - Concept & Planning (concept).pdf" target="_blank" rel="noopener noreferrer">Concept</a></li>
-                <li><a href="Step ONE - Concept & Planning (gameplay).pdf" target="_blank" rel="noopener noreferrer">Gameplay</a></li>
-                <li><a href="Step ONE - Concept & Planning (scale).pdf" target="_blank" rel="noopener noreferrer">Scale</a></li>
-                <li><a href="Step ONE - Concept & Planning (rough outline).pdf" target="_blank" rel="noopener noreferrer">Rough outline</a></li>
-            </ul>
-        </div>
-        <h3>Step TWO</h3>
-        <p>Work In Progress</p>
-        <p>Check back later for more information!</p>
-        
-    </section>
+    <p><strong>Status:</strong> In development</p>
+
+    <p>
+    Starview is a personal game project I am currently working on.
+    Within this project I am learning Unreal Engine and C++ to build interactive systems and game mechanics.
+    </p>
+
+    <p>
+    The goal of this project is to develop my understanding of game development,
+    programming logic and real-time interaction.
+    </p>
+
+    <p style="margin-top:20px;">
+    The creative vision of Starview is still evolving, combining imagination with technical development.
+    </p>
+
+    <p>
+    I am currently focused on learning the fundamentals and expanding the project step by step.
+    </p>
+
+    <div class="doc-link">
+        <a href="Roadmap.pdf" target="_blank" rel="noopener noreferrer">View Project Roadmap →</a>
+    </div>
+
+    <p>So far I've finished step ONE, check it out!</p>
+
+    <h3>Step ONE</h3>
+    <div id="step-one">
+        <ul>
+            <li><a href="Step ONE - Concept & Planning (concept).pdf" target="_blank" rel="noopener noreferrer">Concept</a></li>
+            <li><a href="Step ONE - Concept & Planning (gameplay).pdf" target="_blank" rel="noopener noreferrer">Gameplay</a></li>
+            <li><a href="Step ONE - Concept & Planning (scale).pdf" target="_blank" rel="noopener noreferrer">Scale</a></li>
+            <li><a href="Step ONE - Concept & Planning (rough outline).pdf" target="_blank" rel="noopener noreferrer">Rough outline</a></li>
+        </ul>
+    </div>
+
+    <h3>Step TWO</h3>
+    <p>Work In Progress</p>
+    <p>Check back later for more information!</p>
+
+</section>
 </body>
 </html>
