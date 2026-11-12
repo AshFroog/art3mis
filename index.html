@@ -1,84 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Art3mis - Portfolio, creative showcase, and personal space of Asher Zuurendonk.">
+    <meta name="description" content="AshaVerse - The personal and creative world of Asher Zuurendonk.">
     <title>AshaVerse</title>
+
     <link rel="stylesheet" href="style.css">
+
     <style>
+        /* GENERAL */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fdf6f0;
             color: #333;
+            line-height: 1.6;
         }
+
+        /* NAVIGATION */
         nav {
             background-color: #613160;
             padding: 10px;
-            text-align: center;
         }
+
         nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
             list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: block;
             margin: 0;
             padding: 0;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+
         nav ul li a {
-            text-decoration: none;
+            display: block;
+            padding: 10px 12px;
             color: white;
+            text-decoration: none;
             font-weight: bold;
+            border-radius: 6px;
         }
-        nav ul li a:hover {
-            text-decoration: underline;
+
+        nav ul li a:hover,
+        nav ul li a:focus-visible,
+        nav ul li a.active {
+            background-color: #80467e;
         }
+
+        /* HERO */
         header {
             text-align: center;
             padding: 50px 20px;
         }
-        header img {
-            max-width: 100%;
-            height: 500px;
-            border-radius: 10px;
+
+        header h1 {
+            margin-bottom: 10px;
         }
+
+        header img {
+            display: block;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 500px;
+            border-radius: 10px;
+            margin: 25px auto 0;
+        }
+
         .tagline {
             font-style: italic;
             color: #555;
             margin-top: 10px;
         }
-        section#about { 
-            padding: 20px; 
-            max-width: 700px; 
-            margin: auto; 
+
+        /* ABOUT */
+        section#about {
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
         }
-    section#about a {
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: #613160; /* zelfde als nav */
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    margin: 5px 5px 5px 0; /* ruimte tussen meerdere links */
-}
 
-section#about a:hover {
-    background-color: #8a4a89; /* hoverkleur */
-}
+        section#about a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #613160;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            margin: 5px 5px 5px 0;
+        }
 
-</style>
+        section#about a:hover {
+            background-color: #8a4a89;
+        }
+
+        /* EXPLORE */
+        #sneak-peeks {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        #sneak-peeks h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .preview {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #ae59ac;
+            color: white;
+        }
+
+        .preview h3 {
+            margin-top: 0;
+            color: white;
+        }
+
+        .preview a {
+            display: inline-block;
+            margin: 10px 12px 0 0;
+            color: #ffe9ff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .preview a:hover {
+            color: white;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 5px;
+            }
+
+            nav ul li a {
+                text-align: center;
+                padding: 12px 6px;
+                font-size: 14px;
+            }
+
+            nav ul li:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+            }
+
+            header {
+                padding: 30px 12px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            section#about {
+                padding: 16px;
+            }
+
+            #sneak-peeks {
+                margin: 25px auto;
+                padding: 0 12px;
+            }
+
+            .preview {
+                padding: 18px 16px;
+                border-radius: 12px;
+                margin-bottom: 16px;
+            }
+
+            .preview a {
+                padding: 4px 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
+    <!-- NAVIGATION -->
+    <nav aria-label="Main navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="index.html" class="active" aria-current="page">Home</a>
+            </li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="rp1.html">Starview</a></li>
             <li><a href="pinterest.html">Fun</a></li>
@@ -88,101 +220,136 @@ section#about a:hover {
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <header>
-        <h1>AshaVerse</h1>
-        <p class="tagline">"Family ain't who you're born with, it's who you die for."</p>
-        <img src="flowers.jpg" alt="No rain, No flowers.">
-    </header>
+    <main>
 
-    <!-- About / Fun Facts Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p><strong>Asha</strong></p>
-        <p>I wander between worlds of ink and imagination. I spend my days building with Legos, drawing, writing poems, and exploring whatever catches my curiosity.
-Sometimes I dive into games, motors, or books that pull me into other worlds.
-My projects, hobbies, and thoughts are scattered like pieces of a puzzle — each with a story if you pay attention.
-I don’t show everything at once, leaving space for surprises and discovery.
-This is my space — a mix of creativity, mystery, and the things I love.</p>
-        <a href="motors.html">Check out my favourite page!</a>
-    </section>
-    <br>
-    <style>
-    #sneak-peeks {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
+        <!-- HERO -->
+        <header>
+            <h1>AshaVerse</h1>
 
-#sneak-peeks h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
+            <p class="tagline">
+                "Family ain't who you're born with, it's who you die for."
+            </p>
 
-.preview {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: #ae59ac;
-}
+            <img
+                src="flowers.jpg"
+                alt="No rain, No flowers."
+            >
+        </header>
 
-.preview h3 {
-  margin-top: 0;
-  color: #ffffff;
-}
+        <!-- ABOUT -->
+        <section id="about">
+            <h2>About Me</h2>
 
-.preview a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #ffa2f3;
-  text-decoration: none;
-  font-weight: bold;
-}
+            <p><strong>Asha</strong></p>
 
-.preview a:hover {
-  text-decoration: underline;
-}
-</style>
-<br>
-<section id="sneak-peeks">
-  <h2>Explore My World</h2>
+            <p>
+                I wander between worlds of ink and imagination.
+                I spend my days building with Legos, drawing,
+                writing poems, and exploring whatever catches
+                my curiosity.
 
-  <!-- Starview Preview -->
-<div class="preview">
-  <h3>Starview</h3>
-  <p>Check out my original indie game, and be prepared to wonder what comes next.</p>
-  <a href="rp1.html">See Starview →</a>
-  <a href="portfolio.html">Developer Portfolio →</a>
-</div>
+                Sometimes I dive into games, motors, or books
+                that pull me into other worlds.
 
-  <!-- Creative Showcase Preview -->
-  <div class="preview">
-    <h3>Creative</h3>
-    <p>From sketches to poems, this is where I let my imagination roam free. A peek into my creative side.</p>
-    <a href="sharkies.html">Explore Creativity →</a>
-  </div>
+                My projects, hobbies, and thoughts are scattered
+                like pieces of a puzzle — each with a story
+                if you pay attention.
 
-  <!-- Fun / Personal Preview -->
-  <div class="preview">
-    <h3>Fun</h3>
-    <p>Hobbies, gaming, motors, and playful adventures. Here’s a glimpse of the things I enjoy the most.</p>
-    <a href="pinterest.html">Discover Fun →</a>
-  </div>
+                I don’t show everything at once, leaving space
+                for surprises and discovery.
 
-  <!-- Blog Preview -->
-  <div class="preview">
-    <h3>Blog</h3>
-    <p>Thoughts, poems, and stories — everything I want to share in my own words. Read a sample of my latest posts.</p>
-    <a href="avatar.html">Read the Blog →</a>
-  </div>
+                This is my space — a mix of creativity, mystery,
+                and the things I love.
+            </p>
 
-  <!-- Motors / Special Page Preview -->
-  <div class="preview">
-    <h3>Motors</h3>
-    <p>My favorite machines and automotive projects. A small look into my motor-related interests.</p>
-    <a href="motors.html">See Motors →</a>
-  </div>
-</section>
+            <a href="motors.html">
+                Check out my favourite page!
+            </a>
+        </section>
+
+        <!-- EXPLORE -->
+        <section id="sneak-peeks">
+            <h2>Explore My World</h2>
+
+            <!-- STARVIEW -->
+            <article class="preview">
+                <h3>Starview</h3>
+
+                <p>
+                    Check out my original indie game,
+                    and be prepared to wonder what comes next.
+                </p>
+
+                <a href="rp1.html">
+                    See Starview &rarr;
+                </a>
+
+                <a href="portfolio.html">
+                    Developer Portfolio &rarr;
+                </a>
+            </article>
+
+            <!-- CREATIVE -->
+            <article class="preview">
+                <h3>Creative</h3>
+
+                <p>
+                    From sketches to poems, this is where
+                    I let my imagination roam free.
+                    A peek into my creative side.
+                </p>
+
+                <a href="sharkies.html">
+                    Explore Creativity &rarr;
+                </a>
+            </article>
+
+            <!-- FUN -->
+            <article class="preview">
+                <h3>Fun</h3>
+
+                <p>
+                    Hobbies, gaming, motors, and playful adventures.
+                    Here’s a glimpse of the things I enjoy the most.
+                </p>
+
+                <a href="pinterest.html">
+                    Discover Fun &rarr;
+                </a>
+            </article>
+
+            <!-- BLOG -->
+            <article class="preview">
+                <h3>Blog</h3>
+
+                <p>
+                    Thoughts, poems, and stories —
+                    everything I want to share in my own words.
+                    Read a sample of my latest posts.
+                </p>
+
+                <a href="avatar.html">
+                    Read the Blog &rarr;
+                </a>
+            </article>
+
+            <!-- MOTORS -->
+            <article class="preview">
+                <h3>Motors</h3>
+
+                <p>
+                    My favorite machines and automotive projects.
+                    A small look into my motor-related interests.
+                </p>
+
+                <a href="motors.html">
+                    See Motors &rarr;
+                </a>
+            </article>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
