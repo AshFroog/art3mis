@@ -1,59 +1,82 @@
+<
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Asher Zuurendonk's ICT, software development and game development portfolio.">
 <title>Portfolio - AshaVerse</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #fdf6f0;
     color: #333;
+    line-height: 1.6;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 nav {
     background-color: #613160;
     padding: 10px;
-    text-align: center;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
     list-style: none;
-    margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
-    text-decoration: none;
+    display: block;
+    padding: 10px 12px;
     color: white;
+    text-decoration: none;
     font-weight: bold;
+    border-radius: 6px;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a:hover,
+nav ul li a:focus-visible {
+    background-color: #80467e;
 }
 
-/* SECTIONS */
+nav ul li a.active {
+    background-color: #80467e;
+}
+
+/* PAGE LAYOUT */
 .container {
+    width: 100%;
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 .section {
-    background: white;
+    background-color: white;
     padding: 25px;
     border-radius: 15px;
     margin-bottom: 25px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+h2 {
+    color: #613160;
 }
 
 /* HERO */
@@ -65,6 +88,11 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+.subtitle {
+    color: #613160;
+    font-weight: bold;
+}
+
 /* SKILLS */
 .skills {
     display: flex;
@@ -73,131 +101,280 @@ nav ul li a:hover {
 }
 
 .skill {
-    background: #eee3ee;
+    background-color: #eee3ee;
     color: #613160;
     padding: 8px 14px;
     border-radius: 20px;
     font-weight: bold;
 }
 
+.skill-group {
+    margin-bottom: 20px;
+}
+
 /* PROJECTS */
 .project {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .project h3 {
     margin-bottom: 5px;
 }
 
-.project a {
+.project a,
+.contact a {
     color: #613160;
     font-weight: bold;
     text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
-.project a:hover {
+.project a:hover,
+.contact a:hover {
     text-decoration: underline;
+}
+
+/* MOBILE DEVICES */
+@media (max-width: 600px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    nav ul li a {
+        text-align: center;
+        padding: 12px 6px;
+        font-size: 14px;
+    }
+
+    nav ul li:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .section {
+        padding: 20px 16px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .skill {
+        font-size: 13px;
+        padding: 7px 11px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
+<!-- NAVIGATION -->
+<nav aria-label="Main navigation">
     <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="rp1.html">Starview</a></li>
-            <li><a href="pinterest.html">Fun</a></li>
-            <li><a href="sharkies.html">Creative</a></li>
-            <li><a href="avatar.html">Blog</a></li>
-            <li><a href="motors.html">Motors</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active" aria-current="page">Portfolio</a></li>
+        <li><a href="rp1.html">Starview</a></li>
+        <li><a href="pinterest.html">Fun</a></li>
+        <li><a href="sharkies.html">Creative</a></li>
+        <li><a href="avatar.html">Blog</a></li>
+        <li><a href="motors.html">Motors</a></li>
     </ul>
 </nav>
 
-<div class="container">
+<main class="container">
 
     <!-- HERO -->
-    <div class="section hero">
+    <section class="section hero">
         <h1>Asher Zuurendonk</h1>
-        <p>Aspiring Software Developer</p>
-    </div>
+        <p class="subtitle">
+            ICT & Application Support |
+            Software Development |
+            Game Development
+        </p>
+    </section>
 
     <!-- ABOUT -->
-    <div class="section">
+    <section class="section">
         <h2>About Me</h2>
-        <p>
-        I am an aspiring Software Developer currently building my skills in webdevelopment and programming.
-        I work with HTML, CSS, JavaScript, C# and SQL, and I enjoy creating projects to improve my skills.
-        I am looking for a BBL internship where I can continue to grow as a developer.
-        </p>
-    </div>
 
-    <!-- SKILLS -->
-    <div class="section">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">C#</div>
-            <div class="skill">SQL</div>
-            <div class="skill">GitHub</div>
-            <div class="skill">Unreal Engine (learning)</div>
-            <div class="skill">C++ (learning)</div>
+        <p>
+            I am an ICT graduate with practical experience
+            in administrative systems, technical support,
+            customer service and operational processes.
+        </p>
+
+        <p>
+            My background combines hospitality,
+            administration and information technology.
+            I enjoy solving problems, learning new systems
+            and improving digital workflows.
+        </p>
+
+        <p>
+            I have experience with Microsoft Excel, SQL
+            and web development technologies including
+            HTML, CSS and JavaScript.
+        </p>
+
+        <p>
+            Alongside my professional work, I develop
+            independent software projects and am
+            currently learning C++ through game
+            development in Unreal Engine.
+        </p>
+
+        <p>
+            I am interested in opportunities involving
+            application support, application administration
+            and related ICT work, with room for professional
+            development.
+        </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="section">
+        <h2>Technical Skills</h2>
+
+        <div class="skill-group">
+            <h3>Applications & Data</h3>
+            <div class="skills">
+                <span class="skill">Microsoft Excel</span>
+                <span class="skill">Microsoft Office</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Shiji Daylight PMS</span>
+            </div>
         </div>
-    </div>
+
+        <div class="skill-group">
+            <h3>Web Development</h3>
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3>Programming & Tools</h3>
+            <div class="skills">
+                <span class="skill">C#</span>
+                <span class="skill">GitHub</span>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3>Currently Learning</h3>
+            <div class="skills">
+                <span class="skill">C++</span>
+                <span class="skill">Unreal Engine 5</span>
+            </div>
+        </div>
+    </section>
 
     <!-- PROJECTS -->
-    <div class="section">
+    <section class="section">
         <h2>Projects</h2>
 
-        <div class="project">
+        <article class="project">
             <h3>To-Do App</h3>
             <p>
-            Interactive to-do app built with HTML, CSS and JavaScript.
-            Includes adding, deleting, completing and saving tasks using localStorage.
+                An interactive task management application
+                built with HTML, CSS and JavaScript.
+                Includes adding, completing and deleting
+                tasks, with data saved using localStorage.
             </p>
-            <a href="https://ashfroog.github.io/todo-app/" target="_blank">View Project →</a>
-        </div>
+            <a href="https://ashfroog.github.io/todo-app/"
+               target="_blank" rel="noopener noreferrer">
+                View Project &rarr;
+            </a>
+        </article>
 
-        <div class="project">
+        <article class="project">
             <h3>Login App</h3>
             <p>
-            Simple login system built with HTML, CSS and JavaScript.
-            Includes validation, error handling and login persistence using localStorage.
+                An educational client-side login demonstration
+                using HTML, CSS and JavaScript.
+                Includes input validation, error handling
+                and local storage. This is a learning project,
+                not a production authentication system.
             </p>
-            <a href="https://ashfroog.github.io/login-app/" target="_blank">View Project →</a>
-        </div>
+            <a href="https://ashfroog.github.io/login-app/"
+               target="_blank" rel="noopener noreferrer">
+                View Project &rarr;
+            </a>
+        </article>
 
-        <div class="project">
-            <h3>Starview (in development)</h3>
+        <article class="project">
+            <h3>Reaction Game</h3>
             <p>
-            A personal game project I am working on while learning Unreal Engine and C++.
-            This project focuses on building my understanding of game development and interactive systems.
+                A browser-based reaction game built with
+                HTML, CSS and JavaScript.
+                Features a scoring system, timer and
+                locally saved high scores.
             </p>
-            <a href="rp1.html">View Starview →</a>
-        </div>
-        <div class="project">
-    <h3>Reaction Game</h3>
-    <p>
-    A browser-based reaction game built with HTML, CSS and JavaScript.
-    The player must click targets as quickly as possible while the game tracks score, time and highscore using localStorage.
-    </p>
-    <a href="https://ashfroog.github.io/reaction-game/" target="_blank">Play Game →</a>
-</div>
+            <a href="https://ashfroog.github.io/reaction-game/"
+               target="_blank" rel="noopener noreferrer">
+                Play Game &rarr;
+            </a>
+        </article>
 
-    </div>
+        <article class="project">
+            <h3>Starview - In Development</h3>
+            <p>
+                An independent game development project
+                using Unreal Engine 5 and C++.
+                Currently focused on programming,
+                gameplay systems, debugging and
+                developing small standalone games.
+            </p>
+            <a href="rp1.html">
+                View Starview &rarr;
+            </a>
+        </article>
+    </section>
 
     <!-- CONTACT -->
-    <div class="section">
+    <section class="section contact">
         <h2>Contact</h2>
-        <p>Email: asherzuurendonk@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/ashfroog" target="_blank">github.com/ashfroog</a></p>
-    </div>
 
-</div>
+        <p>
+            Email:
+            <a href="mailto:asherzuurendonk@gmail.com">
+                asherzuurendonk@gmail.com
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/ashfroog"
+               target="_blank" rel="noopener noreferrer">
+                github.com/ashfroog
+            </a>
+        </p>
+    </section>
+
+</main>
 
 </body>
 </html>
