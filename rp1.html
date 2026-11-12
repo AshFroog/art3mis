@@ -48,148 +48,280 @@ nav ul li a:hover {
 /* MAIN CONTAINER */
 #starview {
     max-width: 850px;
-    margin: 50px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
+<!DOCTYPE html>
+<html lang="en">
 
-/* TITLES */
-#starview h2 {
-    margin-top: 0;
-    color: #613160;
-    text-align: center;
-    font-size: 28px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-#starview h3 {
-    margin-top: 30px;
-    color: #613160;
-    font-size: 20px;
-}
+    <meta name="description"
+          content="Starview - An independent game development project by Asher Zuurendonk.">
 
-/* TEXT */
-#starview p {
-    line-height: 1.7;
-    margin-bottom: 15px;
-    font-size: 15px;
-}
+    <title>Starview - AshaVerse</title>
 
-/* STATUS */
-#starview strong {
-    color: #613160;
-}
+    <style>
+        /* GENERAL */
+        * {
+            box-sizing: border-box;
+        }
 
-/* ROADMAP BUTTON */
-.doc-link {
-    margin: 25px 0;
-    text-align: center;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6f0;
+            color: #333;
+            line-height: 1.6;
+        }
 
-.doc-link a {
-    display: inline-block;
-    padding: 12px 18px;
-    background-color: #613160;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
+        /* NAVIGATION */
+        nav {
+            background-color: #613160;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-.doc-link a:hover {
-    background-color: #8a4a89;
-    transform: translateY(-2px);
-}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-/* STEP LIST */
-#step-one ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
+        nav ul li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
 
-#step-one li {
-    margin-bottom: 12px;
-}
+        nav ul li a {
+            display: block;
+            padding: 10px 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+        }
 
-/* STEP LINKS */
-#step-one a {
-    display: inline-block;
-    padding: 10px 14px;
-    background-color: #eee3ee;
-    color: #613160;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.2s ease;
-}
+        nav ul li a:hover,
+        nav ul li a:focus-visible,
+        nav ul li a.active {
+            background-color: #80467e;
+        }
 
-#step-one a:hover {
-    background-color: #e0cce0;
-    transform: translateY(-2px);
-}
-
-/* STEP TWO */
-#starview p:last-child {
-    margin-bottom: 0;
-}
-
-/* OPTIONAL IMAGE STYLE */
-#starview img {
-    max-width: 100%;
-    border-radius: 12px;
-    margin-top: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    #starview {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
+        /* HERO */
         header {
             text-align: center;
             padding: 50px 20px;
         }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
         header img {
+            display: block;
             max-width: 100%;
-            height: 500px;
+            width: auto;
+            height: auto;
+            max-height: 500px;
+            margin: 25px auto 0;
             border-radius: 10px;
         }
+
         .tagline {
             font-style: italic;
             color: #555;
             margin-top: 10px;
         }
 
-/* Lijst neemt alleen de ruimte van de knoppen */
-#step-one ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;    /* onder elkaar */
-    gap: 10px;                 /* ruimte tussen knoppen */
-}
+        /* MAIN STARVIEW CONTAINER */
+        #starview {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* TITLES */
+        #starview h2 {
+            margin-top: 0;
+            color: #613160;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        #starview h3 {
+            margin-top: 30px;
+            color: #613160;
+            font-size: 20px;
+        }
+
+        /* TEXT */
+        #starview p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        #starview strong {
+            color: #613160;
+        }
+
+        /* ROADMAP BUTTON */
+        .doc-link {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .doc-link a {
+            display: inline-block;
+            max-width: 100%;
+            padding: 12px 18px;
+            background-color: #613160;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+            transition: all 0.3s ease;
+        }
+
+        .doc-link a:hover {
+            background-color: #8a4a89;
+            transform: translateY(-2px);
+        }
+
+        /* TECHNOLOGIES */
+        .technology-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .technology-list li {
+            margin-bottom: 10px;
+        }
+
+        /* STEP ONE */
+        #step-one ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        #step-one li {
+            max-width: 100%;
+        }
+
+        #step-one a {
+            display: inline-block;
+            max-width: 100%;
+            padding: 10px 14px;
+            background-color: #eee3ee;
+            color: #613160;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+            transition: all 0.2s ease;
+        }
+
+        #step-one a:hover {
+            background-color: #e0cce0;
+            transform: translateY(-2px);
+        }
+
+        /* STARVIEW IMAGES */
+        #starview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            nav ul {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 5px;
+            }
+
+            nav ul li a {
+                text-align: center;
+                padding: 12px 6px;
+                font-size: 14px;
+            }
+
+            nav ul li:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+            }
+
+            header {
+                padding: 30px 12px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            #starview {
+                margin: 20px 12px;
+                padding: 20px 16px;
+                border-radius: 12px;
+            }
+
+            #starview h2 {
+                font-size: 24px;
+            }
+
+            #starview h3 {
+                font-size: 19px;
+            }
+
+            .doc-link a {
+                padding: 12px 14px;
+            }
+
+            #step-one a {
+                padding: 10px 12px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
+    <!-- NAVIGATION -->
+    <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="rp1.html">Starview</a></li>
+            <li>
+                <a href="rp1.html"
+                   class="active"
+                   aria-current="page">
+                    Starview
+                </a>
+            </li>
             <li><a href="pinterest.html">Fun</a></li>
             <li><a href="sharkies.html">Creative</a></li>
             <li><a href="avatar.html">Blog</a></li>
@@ -197,67 +329,146 @@ nav ul li a:hover {
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <header>
-        <h1>Starview</h1>
-        <p class="tagline">"Accept your heart will break, and trust that you will survive."</p>
-        <img src="dreaming.jpg" alt="What will your next dream be?">
-    </header>
+    <main>
 
-    <!-- Starview content -->
-<!-- Starview content -->
-<section id="starview" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+        <!-- HERO -->
+        <header>
+            <h1>Starview</h1>
 
-    <h2>Starview</h2>
+            <p class="tagline">
+                "Accept your heart will break,
+                and trust that you will survive."
+            </p>
 
-    <p><strong>Status:</strong> In development</p>
+            <img
+                src="dreaming.jpg"
+                alt="What will your next dream be?"
+            >
+        </header>
 
-    <p>
-    Starview is a personal game project I am currently working on.
-    Within this project I am learning Unreal Engine and C++ to build interactive systems and game mechanics.
-    </p>
+        <!-- STARVIEW CONTENT -->
+        <section id="starview">
 
-    <p>
-    The goal of this project is to develop my understanding of game development,
-    programming logic and real-time interaction.
-    </p>
+            <h2>Starview</h2>
 
-    <p style="margin-top:20px;">
-    The creative vision of Starview is still evolving, combining imagination with technical development.
-    </p>
+            <p>
+                <strong>Status:</strong> In development
+            </p>
 
-    <p>
-    I am currently focused on learning the fundamentals and expanding the project step by step.
-    </p>
-    
-    <h3>Technologies & Learning Focus</h3>
+            <p>
+                Starview is a personal game project
+                I am currently working on.
+                Within this project I am learning
+                Unreal Engine and C++ to build
+                interactive systems and game mechanics.
+            </p>
 
-<ul style="list-style: none; padding: 0;">
-    <li><strong>Unreal Engine</strong> – learning environment and game development tools</li>
-    <li><strong>C++</strong> – learning programming logic and system development</li>
-    <li><strong>Game Design</strong> – structuring gameplay systems and mechanics</li>
-</ul>
+            <p>
+                The goal of this project is to develop
+                my understanding of game development,
+                programming logic and real-time interaction.
+            </p>
 
-    <div class="doc-link">
-        <a href="Roadmap.pdf" target="_blank" rel="noopener noreferrer">View Project Roadmap →</a>
-    </div>
+            <p>
+                The creative vision of Starview is still
+                evolving, combining imagination with
+                technical development.
+            </p>
 
-    <p>So far I've finished step ONE, check it out!</p>
+            <p>
+                I am currently focused on learning
+                the fundamentals and expanding
+                the project step by step.
+            </p>
 
-    <h3>Step ONE</h3>
-    <div id="step-one">
-        <ul>
-            <li><a href="Step ONE - Concept & Planning (concept).pdf" target="_blank" rel="noopener noreferrer">Concept</a></li>
-            <li><a href="Step ONE - Concept & Planning (gameplay).pdf" target="_blank" rel="noopener noreferrer">Gameplay</a></li>
-            <li><a href="Step ONE - Concept & Planning (scale).pdf" target="_blank" rel="noopener noreferrer">Scale</a></li>
-            <li><a href="Step ONE - Concept & Planning (rough outline).pdf" target="_blank" rel="noopener noreferrer">Rough outline</a></li>
-        </ul>
-    </div>
+            <!-- TECHNOLOGIES -->
+            <h3>Technologies & Learning Focus</h3>
 
-    <h3>Step TWO</h3>
-    <p>Work In Progress</p>
-    <p>Check back later for more information!</p>
+            <ul class="technology-list">
+                <li>
+                    <strong>Unreal Engine</strong> –
+                    learning environment and game
+                    development tools
+                </li>
 
-</section>
+                <li>
+                    <strong>C++</strong> –
+                    learning programming logic and
+                    system development
+                </li>
+
+                <li>
+                    <strong>Game Design</strong> –
+                    structuring gameplay systems
+                    and mechanics
+                </li>
+            </ul>
+
+            <!-- PROJECT ROADMAP -->
+            <div class="doc-link">
+                <a href="Roadmap.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Project Roadmap &rarr;
+                </a>
+            </div>
+
+            <p>
+                So far I've finished step ONE,
+                check it out!
+            </p>
+
+            <!-- STEP ONE -->
+            <h3>Step ONE</h3>
+
+            <div id="step-one">
+                <ul>
+                    <li>
+                        <a href="Step ONE - Concept & Planning (concept).pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Concept
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Step ONE - Concept & Planning (gameplay).pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Gameplay
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Step ONE - Concept & Planning (scale).pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Scale
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Step ONE - Concept & Planning (rough outline).pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Rough outline
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- STEP TWO -->
+            <h3>Step TWO</h3>
+
+            <p>Work In Progress</p>
+
+            <p>
+                Check back later for more information!
+            </p>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
